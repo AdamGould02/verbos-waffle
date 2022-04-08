@@ -16,4 +16,4 @@ Datasets:
          
          Adam Gould: 
          
-         Ashley Ingenito: 
+         Ashley Ingenito: Toxic Release Inventory facility locations in Allegheny County https://data.wprdc.org/dataset/toxic-release-inventory/resource/d41759fa-3099-46ae-8a0d-3198ccc80002 
