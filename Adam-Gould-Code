@@ -1,0 +1,8 @@
+import pandas as pd
+
+crime = pd.read_csv("CRIME_DATA.csv")
+neighborhood = dict()
+
+pd.set_option("display.max_rows", None)
+
+crime["INCIDENTNEIGHBORHOOD"].value_counts()
