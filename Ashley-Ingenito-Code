@@ -1,1 +1,14 @@
+import pandas as pd
+import geopandas as gpd
+import numpy as np
+%matplotlib inline
+import matplotlib.pyplot as plt
+from shapely.geometry import Point, Polygon
+tridata = pd.read_csv('trifacilities.csv')
 
+pittsburgh = tridata["CITY_NAME"] == "PITTSBURGH"
+pitt = tridata[pittsburgh]
+zipcodecount = pitt['ZIP_CODE'].value_counts()
+zipcode_df = zipcodecount.to_frame()
+zipcode_df.plot.bar()
+plt.title('TRI within Pittsburgh ZipCodes')
