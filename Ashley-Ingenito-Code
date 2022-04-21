@@ -12,3 +12,7 @@ zipcodecount = pitt['ZIP_CODE'].value_counts()
 zipcode_df = zipcodecount.to_frame()
 zipcode_df.plot.bar()
 plt.title('TRI within Pittsburgh ZipCodes')
+
+zipcodes = pitt.query("ZIP_CODE == 15215 or ZIP_CODE == 15218 or ZIP_CODE == 15220 or ZIP_CODE == 15224 or ZIP_CODE == 15204 or ZIP_CODE == 15236 or ZIP_CODE == 15275 or ZIP_CODE == 15206 or ZIP_CODE == 15219 or ZIP_CODE == 15212")
+zipcodes_geo = gpd.GeoDataFrame(zipcodes, geometry = gpd.points_from_xy(zipcodes.PREF_LONGITUDE, zipcodes.PREF_LATITUDE))
+zipcodes_geo['ZIP_CODE'].value_counts()
